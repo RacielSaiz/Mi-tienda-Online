@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda Online</h1>
+        <nav>
+            <input type="text" id="searchName" placeholder="Buscar por nombre...">
+            <input type="text" id="searchDescription" placeholder="Buscar por descripción...">
+            <select id="categoryFilter">
+                <option value="all">Todos los productos</option>
+                <!-- Añadir más categorías según sea necesario -->
+            </select>
+        </nav>
+    </header>
+    <main>
+        <button id="addProductButton">Agregar Producto</button>
+        <section id="addProductPanel" style="display: none;">
+            <h2>Agregar Producto</h2>
+            <form id="addProductForm">
+                <input type="text" id="productName" placeholder="Nombre del producto" required>
+                <textarea id="productDescription" placeholder="Descripción" required></textarea>
+                <input type="number" id="productPrice" placeholder="Precio" required>
+                <input type="file" id="productImage" required>
+                <input type="tel" id="sellerPhone" placeholder="Número de celular">
+                <input type="email" id="sellerEmail" placeholder="Correo electrónico">
+                <select id="productCategory">
+                    <option value="Sin categorías">Sin categorías</option>
+                    <!-- Añadir más categorías según sea necesario -->
+                </select>
+                <input type="text" id="newCategory" placeholder="Nueva categoría">
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+        <section id="productList">
+            <!-- Aquí se mostrarán los productos -->
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
